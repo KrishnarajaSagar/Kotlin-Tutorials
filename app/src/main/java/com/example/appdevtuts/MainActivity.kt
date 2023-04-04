@@ -10,10 +10,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var count = 0
-        btnIncrement.setOnClickListener {
-            count++
-            tvTimesClicked.text = "Number of times clicked : $count"
+        btnAdd.setOnClickListener {
+            var a = etFirstNum.text.toString().toFloat()
+            var b = etSecondNum.text.toString().toFloat()
+            tvResult.text = (a+b).toString()
+        }
+        btnSubtract.setOnClickListener {
+            var a = etFirstNum.text.toString().toFloat()
+            var b = etSecondNum.text.toString().toFloat()
+            tvResult.text = (a-b).toString()
+        }
+        btnMultiply.setOnClickListener {
+            var a = etFirstNum.text.toString().toFloat()
+            var b = etSecondNum.text.toString().toFloat()
+            tvResult.text = (a*b).toString()
+        }
+        btnDivide.setOnClickListener {
+            var a = etFirstNum.text.toString().toFloat()
+            var b = etSecondNum.text.toString().toFloat()
+            tvResult.text = (a/b).toString()
         }
     }
 }
