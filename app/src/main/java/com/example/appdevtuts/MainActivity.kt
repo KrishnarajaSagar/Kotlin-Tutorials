@@ -10,13 +10,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnApply.setOnClickListener {
-            val firstName = etFirstName.text.toString()
-            val lastName = etLastName.text.toString()
-            val birthDate = etBirthDate.text.toString()
-            val country = etCountry.text.toString()
-            Log.d("MainActivity",
-                "$firstName $lastName born on $birthDate at $country")
+        var count = 0
+        btnIncrement.setOnClickListener {
+            count++
+            tvTimesClicked.text = "Number of times clicked : $count"
         }
     }
 }
