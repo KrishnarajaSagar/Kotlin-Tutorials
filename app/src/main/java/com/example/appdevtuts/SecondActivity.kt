@@ -9,11 +9,8 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val firstName = intent.getStringExtra("EXTRA_FIRST_NAME")
-        val lastName = intent.getStringExtra("EXTRA_LAST_NAME")
-        val birthDate = intent.getStringExtra("EXTRA_BIRTH_DATE")
-        val country = intent.getStringExtra("EXTRA_COUNTRY")
-        val res = "${firstName} ${lastName} born on ${birthDate} at ${country}"
+        val person = intent.getSerializableExtra("EXTRA_PERSON")
+        val res = person.toString()
         tvResult.text = res
     }
 }
